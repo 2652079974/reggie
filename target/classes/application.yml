@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: reggie
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reggie
+      username: root
+      password: 123456
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+default-value:
+  employee-password: 123456
+  file-path: H:\\files
+
+thread-pool:
+  core-pool-size: 10
+  max-pool-size: 20
+  queue-capacity: 200
+  thread-name-prefix: threadPoolTaskExecutor-
